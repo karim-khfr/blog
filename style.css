@@ -1,0 +1,20 @@
+/*
+Theme Name: Mon blog
+Theme URI: https://example.com
+Author: Karim Khenifer
+Author URI: https://github.com/karim-khfr
+Description: Mon thème WordPress personnalisé dédié à mon blog personnel.
+Version: 1.0.0
+Requires at least: 6.6
+Requires PHP: 8.1
+Text Domain: mon-theme
+*/
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.15em;
+}
