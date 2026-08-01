@@ -68,6 +68,30 @@ blog/
 
 ---
 
+## Installation
+
+1. Copier le dossier `blog` dans :
+
+wp-content/themes/
+
+2. Activer le thème depuis
+
+Apparence → Thèmes
+
+---
+
+## Roadmap
+
+- [x] Structure du thème
+- [x] Templates principaux
+- [ ] Header
+- [ ] Footer
+- [ ] Patterns
+- [ ] Portfolio
+- [ ] Responsive
+
+---
+
 ## Développement
 
 Le thème est développé localement avec :
