@@ -85,8 +85,8 @@ Mettre en place une architecture propre et maintenable.
 - [x] Dossier `inc`
 - [x] README
 - [x] ROADMAP
-- [ ] .editorconfig
-- [ ] Nettoyage final de `theme.json`
+- [x] .editorconfig
+- [x] Nettoyage final de `theme.json`
 
 ---
 
