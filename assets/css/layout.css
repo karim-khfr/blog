@@ -1,0 +1,16 @@
+/**
+ * Mise en page générale.
+ */
+
+.site-main {
+    min-height: 60vh;
+}
+
+.wp-site-blocks {
+    min-height: 100vh;
+}
+
+header.wp-block-template-part,
+footer.wp-block-template-part {
+    width: 100%;
+}

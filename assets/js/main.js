@@ -1,3 +1,7 @@
+/**
+ * Scripts publics du thème.
+ */
+
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Le thème est chargé.");
+    console.log("Thème Blog chargé.");
 });

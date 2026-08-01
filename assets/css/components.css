@@ -1,0 +1,29 @@
+/**
+ * Composants du thème.
+ */
+
+.wp-block-post-terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.wp-block-post-terms a {
+    text-decoration: none;
+}
+
+.wp-block-post-terms a:hover,
+.wp-block-post-terms a:focus-visible {
+    text-decoration: underline;
+}
+
+.wp-block-button__link {
+    transition:
+        transform 150ms ease,
+        opacity 150ms ease;
+}
+
+.wp-block-button__link:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}

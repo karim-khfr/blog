@@ -1,0 +1,34 @@
+/**
+ * Styles de base.
+ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-underline-offset: 0.15em;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
