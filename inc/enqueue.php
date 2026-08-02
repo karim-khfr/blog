@@ -45,6 +45,13 @@ function blog_enqueue_assets(): void
     );
 
     wp_enqueue_style(
+        'blog-fonts',
+        get_theme_file_uri('assets/css/fonts.css'),
+        array('blog-style'),
+        blog_get_asset_version('assets/css/fonts.css')
+    );
+
+    wp_enqueue_style(
         'blog-base',
         get_theme_file_uri('assets/css/base.css'),
         array('blog-style'),

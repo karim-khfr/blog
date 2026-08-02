@@ -50,12 +50,19 @@ select {
 
 a {
     color: inherit;
+    text-decoration-line: underline;
+    text-decoration-color: rgba(157, 129, 137, 0.35);
+    text-decoration-thickness: 1px;
     text-underline-offset: 0.18em;
-    transition: color 200ms ease;
+    transition:
+        color 200ms ease,
+        text-decoration-color 200ms ease;
 }
 
-a:hover {
+a:hover,
+a:focus-visible {
     color: var(--blog-color-accent);
+    text-decoration-color: currentColor;
 }
 
 :focus-visible {
