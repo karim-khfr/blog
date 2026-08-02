@@ -1,9 +1,15 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
-<main class="wp-block-group">
+<!-- wp:group {"tagName":"main","className":"site-main site-main--front-page","align":"full","layout":{"type":"default"}} -->
+<main class="wp-block-group alignfull site-main site-main--front-page">
 
-	<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+	<!-- wp:group {"className":"front-page-inner","layout":{"type":"default"}} -->
+	<div class="wp-block-group front-page-inner">
+
+		<!-- wp:post-content {"layout":{"type":"default"}} /-->
+
+	</div>
+	<!-- /wp:group -->
 
 </main>
 <!-- /wp:group -->
