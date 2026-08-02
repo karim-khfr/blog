@@ -2,15 +2,23 @@
  * Mise en page générale.
  */
 
-.site-main {
-    min-height: 60vh;
-}
-
 .wp-site-blocks {
     min-height: 100vh;
+    overflow-wrap: break-word;
+}
+
+.site-main {
+    min-height: 60vh;
 }
 
 header.wp-block-template-part,
 footer.wp-block-template-part {
     width: 100%;
+}
+
+@media (max-width: 781px) {
+    .wp-site-blocks {
+        --wp--style--global--content-size: calc(100% - 2rem);
+        --wp--style--global--wide-size: calc(100% - 2rem);
+    }
 }
