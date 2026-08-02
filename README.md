@@ -22,6 +22,9 @@ blog/
 │   │   ├── base.css
 │   │   ├── layout.css
 │   │   └── components.css
+│   ├── fonts/
+│   │   ├── general-sans/
+│   │   └── khand/
 │   ├── images/
 │   └── js/
 │       └── main.js

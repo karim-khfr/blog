@@ -98,12 +98,12 @@ Créer une identité graphique cohérente.
 
 ### À réaliser
 
-- [ ] Palette de couleurs
-- [ ] Typographie
-- [ ] Espacements
-- [ ] Largeurs de contenu
+- [x] Palette de couleurs
+- [x] Typographie
+- [x] Espacements
+- [x] Largeurs de contenu
 - [ ] Boutons
-- [ ] Liens
+- [x] Liens
 - [ ] Formulaires
 - [ ] Images
 - [ ] Cartes
