@@ -1,0 +1,28 @@
+/**
+ * Boutons du thème.
+ */
+
+.wp-block-button__link {
+    border-radius: var(--blog-radius);
+    transition:
+        transform 150ms ease,
+        background-color 200ms ease,
+        border-color 200ms ease,
+        color 200ms ease;
+}
+
+.wp-block-button__link:hover {
+    transform: translateY(-1px);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+    background-color: transparent;
+    border: 1px solid var(--blog-color-text);
+    color: var(--blog-color-text);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+    background-color: var(--blog-color-surface);
+    border-color: var(--blog-color-accent);
+    color: var(--blog-color-accent);
+}

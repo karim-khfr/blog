@@ -1,0 +1,12 @@
+/**
+ * Cartes du thème.
+ */
+
+.blog-card,
+.wp-block-group.is-style-blog-card {
+    padding: var(--wp--preset--spacing--40);
+    background-color: var(--blog-color-surface);
+    border: 1px solid var(--blog-color-border);
+    border-radius: var(--blog-radius);
+    box-shadow: var(--blog-shadow-soft);
+}

@@ -35,6 +35,12 @@ function blog_get_asset_version(string $relative_path): string
  *
  * @return void
  */
+
+/**
+ * Charge les ressources publiques du thème.
+ *
+ * @return void
+ */
 function blog_enqueue_assets(): void
 {
     wp_enqueue_style(
@@ -54,7 +60,7 @@ function blog_enqueue_assets(): void
     wp_enqueue_style(
         'blog-base',
         get_theme_file_uri('assets/css/base.css'),
-        array('blog-style'),
+        array('blog-fonts'),
         blog_get_asset_version('assets/css/base.css')
     );
 
@@ -66,10 +72,52 @@ function blog_enqueue_assets(): void
     );
 
     wp_enqueue_style(
-        'blog-components',
-        get_theme_file_uri('assets/css/components.css'),
+        'blog-buttons',
+        get_theme_file_uri('assets/css/components/buttons.css'),
         array('blog-layout'),
-        blog_get_asset_version('assets/css/components.css')
+        blog_get_asset_version('assets/css/components/buttons.css')
+    );
+
+    wp_enqueue_style(
+        'blog-cards',
+        get_theme_file_uri('assets/css/components/cards.css'),
+        array('blog-buttons'),
+        blog_get_asset_version('assets/css/components/cards.css')
+    );
+
+    wp_enqueue_style(
+        'blog-forms',
+        get_theme_file_uri('assets/css/components/forms.css'),
+        array('blog-cards'),
+        blog_get_asset_version('assets/css/components/forms.css')
+    );
+
+    wp_enqueue_style(
+        'blog-navigation',
+        get_theme_file_uri('assets/css/components/navigation.css'),
+        array('blog-forms'),
+        blog_get_asset_version('assets/css/components/navigation.css')
+    );
+
+    wp_enqueue_style(
+        'blog-badges',
+        get_theme_file_uri('assets/css/components/badges.css'),
+        array('blog-navigation'),
+        blog_get_asset_version('assets/css/components/badges.css')
+    );
+
+    wp_enqueue_style(
+        'blog-pagination',
+        get_theme_file_uri('assets/css/components/pagination.css'),
+        array('blog-badges'),
+        blog_get_asset_version('assets/css/components/pagination.css')
+    );
+
+    wp_enqueue_style(
+        'blog-utilities',
+        get_theme_file_uri('assets/css/utilities.css'),
+        array('blog-pagination'),
+        blog_get_asset_version('assets/css/utilities.css')
     );
 
     $script_path = get_theme_file_path('assets/js/main.js');

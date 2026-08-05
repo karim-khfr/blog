@@ -1,0 +1,23 @@
+/**
+ * Métadonnées et catégories.
+ */
+
+.wp-block-post-date,
+.wp-block-post-terms {
+    font-size: var(--wp--preset--font-size--small);
+}
+
+.wp-block-post-terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.wp-block-post-terms a {
+    text-decoration: none;
+}
+
+.wp-block-post-terms a:hover,
+.wp-block-post-terms a:focus-visible {
+    text-decoration: underline;
+}

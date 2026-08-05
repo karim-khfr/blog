@@ -1,0 +1,165 @@
+/**
+ * Header et navigation principale.
+ */
+
+/* Header */
+
+.site-header {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    background-color: var(--blog-color-background);
+    border-bottom: 1px solid var(--blog-color-border);
+}
+
+.site-header__inner {
+    box-sizing: border-box;
+    width: min(100%, 1600px);
+    margin-inline: auto;
+    padding-block: 1rem;
+    padding-inline: clamp(1rem, 4vw, 3rem);
+}
+
+/* Titre du site */
+
+.site-header__title {
+    flex-shrink: 0;
+    margin: 0;
+    font-family: var(--wp--preset--font-family--heading);
+    font-size: var(--wp--preset--font-size--heading-3);
+    font-weight: 600;
+    line-height: 1;
+}
+
+.site-header__title a {
+    color: var(--blog-color-text);
+    text-decoration: none;
+}
+
+.site-header__title a:hover,
+.site-header__title a:focus-visible {
+    color: var(--blog-color-accent);
+}
+
+/* Zone navigation et réseaux sociaux */
+
+.site-header__actions {
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+/* Navigation principale */
+
+.site-header__navigation {
+    font-size: var(--wp--preset--font-size--base);
+    font-weight: 500;
+}
+
+.site-header__navigation .wp-block-navigation-item__content {
+    position: relative;
+    padding-block: 0.5rem;
+    color: var(--blog-color-text);
+    text-decoration: none;
+}
+
+.site-header__navigation .wp-block-navigation-item__content::after {
+    position: absolute;
+    right: 0;
+    bottom: 0.2rem;
+    left: 0;
+    height: 1px;
+    background-color: var(--blog-color-accent);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease;
+}
+
+.site-header__navigation .wp-block-navigation-item__content:hover::after,
+.site-header__navigation .wp-block-navigation-item__content:focus-visible::after,
+.site-header__navigation .current-menu-item>.wp-block-navigation-item__content::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Réseaux sociaux */
+
+.site-header__socials {
+    flex-shrink: 0;
+}
+
+.site-header__socials .wp-block-social-links {
+    gap: 0.75rem;
+    margin: 0;
+}
+
+.site-header__socials .wp-social-link a {
+    color: var(--blog-color-text);
+}
+
+.site-header__socials .wp-social-link a:hover,
+.site-header__socials .wp-social-link a:focus-visible {
+    color: var(--blog-color-accent);
+    transform: translateY(-1px);
+}
+
+/* Bouton burger */
+
+.site-header .wp-block-navigation__responsive-container-open,
+.site-header .wp-block-navigation__responsive-container-close {
+    padding: 0.5rem;
+    color: var(--blog-color-text);
+    border-radius: var(--blog-radius);
+}
+
+.site-header .wp-block-navigation__responsive-container-open:hover,
+.site-header .wp-block-navigation__responsive-container-close:hover {
+    color: var(--blog-color-accent);
+    background-color: var(--blog-color-surface);
+}
+
+/* Menu mobile ouvert */
+
+.site-header .wp-block-navigation__responsive-container.is-menu-open {
+    padding: 1.5rem;
+    background-color: var(--blog-color-background);
+    color: var(--blog-color-text);
+}
+
+.site-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+    align-items: flex-start;
+    padding-top: 3rem;
+}
+
+.site-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+    align-items: flex-start;
+    gap: 1.25rem;
+    font-family: var(--wp--preset--font-family--heading);
+    font-size: var(--wp--preset--font-size--heading-3);
+    font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 781px) {
+    .site-header__inner {
+        min-height: 4.5rem;
+        padding-block: 0.75rem;
+    }
+
+    .site-header__title {
+        font-size: var(--wp--preset--font-size--heading-4);
+    }
+
+    .site-header__actions {
+        gap: 0.75rem;
+    }
+
+    /*
+	 * Les réseaux sociaux seront affichés dans le menu mobile
+	 * lors d'une prochaine amélioration. On masque leur emplacement
+	 * extérieur pour préserver l'espace du header.
+	 */
+    .site-header__socials {
+        display: none;
+    }
+}

@@ -1,15 +1,38 @@
-<!-- wp:group {"tagName":"header","layout":{"type":"constrained"}} -->
-<header class="wp-block-group">
+<!-- wp:group {"tagName":"header","className":"site-header","align":"full","layout":{"type":"default"}} -->
+<header class="wp-block-group alignfull site-header">
 
-    <!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between"}} -->
-    <div class="wp-block-group">
+	<!-- wp:group {"className":"site-header__inner","align":"wide","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+	<div class="wp-block-group alignwide site-header__inner">
 
-        <!-- wp:site-title {"level":0} /-->
+		<!-- wp:site-title {"level":0,"className":"site-header__title"} /-->
 
-        <!-- wp:navigation /-->
+		<!-- wp:group {"className":"site-header__actions","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right","verticalAlignment":"center"}} -->
+		<div class="wp-block-group site-header__actions">
 
-    </div>
-    <!-- /wp:group -->
+			<!-- wp:navigation {"overlayMenu":"mobile","className":"site-header__navigation","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal"}} -->
+				<!-- wp:navigation-link {"label":"Accueil","url":"/","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"Blog","url":"/blog/","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"Portfolio","url":"/portfolio/","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"Contact","url":"/contact/","kind":"custom"} /-->
+                <!-- wp:social-link {"url":"https://github.com/karim-khfr","service":"github"} /-->
+			<!-- /wp:navigation -->
+
+			<!-- wp:group {"className":"site-header__socials","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group site-header__socials">
+
+				<!-- wp:social-links {"iconColor":"foreground","iconColorValue":"#0A0A23","openInNewTab":true,"size":"has-small-icon-size","className":"is-style-logos-only"} -->
+				<ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only">
+				</ul>
+				<!-- /wp:social-links -->
+
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+		<!-- /wp:group -->
+
+	</div>
+	<!-- /wp:group -->
 
 </header>
 <!-- /wp:group -->
