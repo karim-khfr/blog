@@ -102,7 +102,7 @@ Créer une identité graphique cohérente.
 - [x] Typographie
 - [x] Espacements
 - [x] Largeurs de contenu
-- [ ] Boutons
+- [x] Boutons
 - [x] Liens
 - [ ] Formulaires
 - [ ] Images
@@ -115,9 +115,9 @@ Créer une identité graphique cohérente.
 
 ### Header
 
-- [ ] Logo
-- [ ] Navigation
-- [ ] Menu responsive
+- [x] Logo
+- [x] Navigation
+- [x] Menu responsive
 - [ ] Bouton CTA
 
 ### Footer
