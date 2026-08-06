@@ -19,9 +19,20 @@ Thème WordPress personnalisé développé avec les **Block Themes** (Full Site 
 blog/
 ├── assets/
 │   ├── css/
-│   │   ├── base.css
-│   │   ├── layout.css
-│   │   └── components.css
+|   |     ├── components/
+|   |     |    ├── badges.css
+|   |     |    └── buttons.css
+|   |     |    └── cards.css
+|   |     |    └── footer.css
+|   |     |    └── forms.css
+|   |     |    └── header.css
+|   |     |    └── hero.css
+|   |     |    └── metadata.css
+|   |     |    └── navigation.css
+|   |     |    └── pagination.css
+|   |     ├── base.css
+|   |     └── fonts.css
+│   │     └──  layout.css
 │   ├── fonts/
 │   │   ├── general-sans/
 │   │   └── khand/
