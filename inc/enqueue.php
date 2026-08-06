@@ -100,9 +100,16 @@ function blog_enqueue_assets(): void
     );
 
     wp_enqueue_style(
+        'blog-footer',
+        get_theme_file_uri('assets/css/components/footer.css'),
+        array('blog-navigation'),
+        blog_get_asset_version('assets/css/components/footer.css')
+    );
+
+    wp_enqueue_style(
         'blog-badges',
         get_theme_file_uri('assets/css/components/badges.css'),
-        array('blog-navigation'),
+        array('blog-footer'),
         blog_get_asset_version('assets/css/components/badges.css')
     );
 
