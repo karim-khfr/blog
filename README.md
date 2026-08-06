@@ -98,8 +98,8 @@ Apparence → Thèmes
 
 - [x] Structure du thème
 - [x] Templates principaux
-- [ ] Header
-- [ ] Footer
+- [x] Header
+- [x] Footer
 - [ ] Patterns
 - [ ] Portfolio
 - [ ] Responsive
