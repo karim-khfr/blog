@@ -9,7 +9,7 @@
     z-index: 100;
     width: 100%;
     background-color: var(--blog-color-background);
-    border-bottom: 1px solid var(--blog-color-border);
+    box-shadow: 0 2px 14px rgba(10, 10, 35, 0.05);
 }
 
 .site-header__inner {
@@ -26,9 +26,10 @@
     flex-shrink: 0;
     margin: 0;
     font-family: var(--wp--preset--font-family--heading);
-    font-size: var(--wp--preset--font-size--heading-3);
+    font-size: clamp(1.75rem, 2.5vw, 2.25rem);
     font-weight: 600;
     line-height: 1;
+    letter-spacing: 0.015em;
 }
 
 .site-header__title a {
@@ -50,7 +51,7 @@
 /* Navigation principale */
 
 .site-header__navigation {
-    font-size: var(--wp--preset--font-size--base);
+    font-size: var(--wp--preset--font-size--lead);
     font-weight: 500;
 }
 
@@ -76,9 +77,19 @@
 
 .site-header__navigation .wp-block-navigation-item__content:hover::after,
 .site-header__navigation .wp-block-navigation-item__content:focus-visible::after,
-.site-header__navigation .current-menu-item>.wp-block-navigation-item__content::after {
+.site-header__navigation .current-menu-item>.wp-block-navigation-item__content::after,
+.site-header__navigation .current-menu-ancestor>.wp-block-navigation-item__content::after,
+.site-header__navigation .is-current>.wp-block-navigation-item__content::after,
+.site-header__navigation .wp-block-navigation-item__content[aria-current="page"]::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+.site-header__navigation .current-menu-item>.wp-block-navigation-item__content,
+.site-header__navigation .current-menu-ancestor>.wp-block-navigation-item__content,
+.site-header__navigation .is-current>.wp-block-navigation-item__content,
+.site-header__navigation .wp-block-navigation-item__content[aria-current="page"] {
+    color: var(--blog-color-accent);
 }
 
 /* Réseaux sociaux */
@@ -92,6 +103,11 @@
     margin: 0;
 }
 
+.site-header__socials .wp-social-link svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 .site-header__socials .wp-social-link a {
     color: var(--blog-color-text);
 }
@@ -100,6 +116,13 @@
 .site-header__socials .wp-social-link a:focus-visible {
     color: var(--blog-color-accent);
     transform: translateY(-1px);
+}
+
+.site-header__socials .wp-social-link a {
+    color: var(--blog-color-text);
+    transition:
+        color 200ms ease,
+        transform 150ms ease;
 }
 
 /* Bouton burger */
@@ -138,16 +161,43 @@
     font-weight: 600;
 }
 
+/**
+ * Breakpoint personnalisé du menu responsive.
+ *
+ * WordPress affiche normalement le menu desktop dès 600px.
+ * On conserve ici le burger jusqu'à 900px.
+ */
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .site-header .wp-block-navigation__responsive-container-open:not(.always-shown) {
+        display: flex;
+    }
+
+    .site-header .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: none;
+    }
+}
+
+@media (min-width: 900px) {
+    .site-header .wp-block-navigation__responsive-container-open:not(.always-shown) {
+        display: none;
+    }
+
+    .site-header .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: block;
+    }
+}
+
 /* Responsive */
 
-@media (max-width: 781px) {
+@media (max-width: 899px) {
     .site-header__inner {
         min-height: 4.5rem;
         padding-block: 0.75rem;
     }
 
     .site-header__title {
-        font-size: var(--wp--preset--font-size--heading-4);
+        font-size: 1.65rem;
     }
 
     .site-header__actions {
