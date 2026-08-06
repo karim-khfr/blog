@@ -10,3 +10,58 @@
     border-radius: var(--blog-radius);
     box-shadow: var(--blog-shadow-soft);
 }
+
+/**
+ * Grille des articles.
+ */
+
+.blog-archive-header {
+    margin-bottom: clamp(2rem, 4vw, 4rem);
+}
+
+.blog-posts-grid {
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    margin-inline: clamp(1rem, 2vw, 2rem);
+}
+
+.blog-posts-grid .wp-block-post {
+    min-width: 0;
+}
+
+.blog-posts-grid .is-style-blog-card {
+    height: 100%;
+}
+
+.blog-posts-grid .blog-card__content {
+    height: 100%;
+}
+
+.blog-posts-grid .wp-block-post-title {
+    margin: 0;
+}
+
+.blog-posts-grid .wp-block-post-title a {
+    text-decoration: none;
+}
+
+.blog-posts-grid .wp-block-post-excerpt {
+    margin: 0;
+}
+
+.blog-posts-grid .wp-block-post-date {
+    margin-top: auto;
+}
+
+@media (max-width: 1023px) {
+    .blog-posts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-inline: clamp(1rem, 2vw, 2rem);
+    }
+}
+
+@media (max-width: 639px) {
+    .blog-posts-grid {
+        grid-template-columns: 1fr;
+        margin-inline: clamp(1rem, 2vw, 2rem);
+    }
+}

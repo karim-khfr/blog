@@ -1,60 +1,76 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem"}}}} -->
-<main class="wp-block-group" style="padding-top:3rem;padding-bottom:3rem">
+<!-- wp:group {"tagName":"main","className":"site-main site-main--blog","layout":{"type":"constrained","contentSize":"1400px","wideSize":"1600px"}} -->
+<main class="wp-block-group site-main site-main--blog">
 
-	<!-- wp:heading {"level":1} -->
-	<h1 class="wp-block-heading">
-		Les dernières publications
-	</h1>
-	<!-- /wp:heading -->
+	<!-- wp:group {"className":"blog-archive-header","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group blog-archive-header">
 
-	<!-- wp:query {"query":{"inherit":true}} -->
-	<div class="wp-block-query">
+		<!-- wp:heading {"level":1} -->
+		<h1 class="wp-block-heading">Mes articles</h1>
+		<!-- /wp:heading -->
 
-		<!-- wp:post-template -->
+		<!-- wp:paragraph -->
+		<p>Retours d'expérience, veille technologique, développement web et réflexions autour du numérique, des nouvelles technologies et de l'Éducation nationale.</p>
+		<!-- /wp:paragraph -->
 
-			<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"margin":{"bottom":"3rem"}}}} -->
-			<div class="wp-block-group" style="margin-bottom:3rem">
+		<!-- wp:group {"className":"blog-filters","layout":{"type":"flex","flexWrap":"wrap"}} -->
+		<div class="wp-block-group blog-filters">
 
-				<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9"} /-->
+			<!-- wp:paragraph {"className":"blog-filters__all is-active"} -->
+			<p class="blog-filters__all is-active">
+				<a href="/blog/" aria-current="page">Tous</a>
+			</p>
+			<!-- /wp:paragraph -->
 
-				<!-- wp:post-title {"isLink":true,"level":2} /-->
+			<!-- wp:categories {"taxonomy":"category","showOnlyTopLevel":true,"showEmpty":false,"className":"blog-filters__categories"} /-->
 
-				<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"}} -->
-				<div class="wp-block-group">
+		</div>
+		<!-- /wp:group -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:query {"queryId":1,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"wide","className":"blog-posts-query"} -->
+	<div class="wp-block-query alignwide blog-posts-query">
+
+		<!-- wp:post-template {"layout":{"type":"grid","columnCount":3},"className":"blog-posts-grid"} -->
+
+			<!-- wp:group {"className":"is-style-blog-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group is-style-blog-card">
+
+				<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3","height":"auto"} /-->
+
+				<!-- wp:group {"className":"blog-card__content","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group blog-card__content">
+
+					<!-- wp:post-terms {"term":"category"} /-->
+
+					<!-- wp:post-title {"isLink":true,"level":2} /-->
+
+					<!-- wp:post-excerpt {"moreText":"Lire l’article"} /-->
 
 					<!-- wp:post-date /-->
 
-					<!-- wp:post-terms {"term":"category","separator":" | "} /-->
-
 				</div>
 				<!-- /wp:group -->
-
-				<!-- wp:post-excerpt {"moreText":"Lire la suite"} /-->
 
 			</div>
 			<!-- /wp:group -->
 
 		<!-- /wp:post-template -->
 
-		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->
-
-			<!-- wp:query-pagination-previous {"label":"Articles précédents"} /-->
-
-			<!-- wp:query-pagination-numbers /-->
-
-			<!-- wp:query-pagination-next {"label":"Articles suivants"} /-->
-
-		<!-- /wp:query-pagination -->
-
 		<!-- wp:query-no-results -->
-
 			<!-- wp:paragraph -->
-			<p>Aucun article n’a encore été publié.</p>
+			<p>Aucun article n’est disponible pour le moment.</p>
 			<!-- /wp:paragraph -->
-
 		<!-- /wp:query-no-results -->
+
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+			<!-- wp:query-pagination-previous {"label":"Articles précédents"} /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next {"label":"Articles suivants"} /-->
+		<!-- /wp:query-pagination -->
 
 	</div>
 	<!-- /wp:query -->
