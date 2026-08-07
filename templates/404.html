@@ -1,41 +1,45 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}}} -->
-<main class="wp-block-group" style="padding-top:6rem;padding-bottom:6rem">
+<!-- wp:group {"tagName":"main","className":"site-main site-main--404","layout":{"type":"constrained","contentSize":"1400px","wideSize":"1600px"}} -->
+<main class="wp-block-group site-main site-main--404">
 
-	<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"xx-large"} -->
-	<h1 class="wp-block-heading has-text-align-center has-xx-large-font-size">
-		404
-	</h1>
-	<!-- /wp:heading -->
+	<!-- wp:group {"className":"error-404","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group error-404">
 
-	<!-- wp:heading {"textAlign":"center","level":2} -->
-	<h2 class="wp-block-heading has-text-align-center">
-		Page introuvable
-	</h2>
-	<!-- /wp:heading -->
+		<!-- wp:paragraph {"className":"error-404__code"} -->
+		<p class="error-404__code">404</p>
+		<!-- /wp:paragraph -->
 
-	<!-- wp:paragraph {"align":"center"} -->
-	<p class="has-text-align-center">
-		La page que vous recherchez n’existe pas, a été déplacée ou n’est plus disponible.
-	</p>
-	<!-- /wp:paragraph -->
+		<!-- wp:heading {"level":1,"className":"error-404__title"} -->
+		<h1 class="wp-block-heading error-404__title">
+			Page introuvable
+		</h1>
+		<!-- /wp:heading -->
 
-	<!-- wp:search {"label":"Rechercher","showLabel":false,"placeholder":"Rechercher sur le site…","buttonText":"Rechercher","buttonUseIcon":true} /-->
+		<!-- wp:paragraph {"className":"error-404__text"} -->
+		<p class="error-404__text">
+			La page que vous recherchez n’existe pas ou a peut-être été déplacée.
+		</p>
+		<!-- /wp:paragraph -->
 
-	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-	<div class="wp-block-buttons">
+		<!-- wp:buttons {"className":"error-404__actions"} -->
+		<div class="wp-block-buttons error-404__actions">
 
-		<!-- wp:button -->
-		<div class="wp-block-button">
-			<a class="wp-block-button__link wp-element-button" href="/">
-				Retour à l’accueil
-			</a>
+			<!-- wp:button -->
+			<div class="wp-block-button">
+				<a class="wp-block-button__link wp-element-button" href="/">
+					Retour à l’accueil
+				</a>
+			</div>
+			<!-- /wp:button -->
+
 		</div>
-		<!-- /wp:button -->
+		<!-- /wp:buttons -->
+
+		<!-- wp:search {"label":"Rechercher","showLabel":false,"placeholder":"Rechercher un article…","buttonText":"Rechercher","buttonUseIcon":false,"className":"error-404__search"} /-->
 
 	</div>
-	<!-- /wp:buttons -->
+	<!-- /wp:group -->
 
 </main>
 <!-- /wp:group -->

@@ -26,11 +26,6 @@
 header.wp-block-template-part,
 footer.wp-block-template-part {
     width: 100%;
-}
-
-@media (max-width: 781px) {
-    .wp-site-blocks {
-        --wp--style--global--content-size: calc(100% - 2rem);
-        --wp--style--global--wide-size: calc(100% - 2rem);
-    }
+    max-width: none;
+    margin-inline: 0;
 }

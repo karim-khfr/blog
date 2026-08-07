@@ -127,13 +127,6 @@ function blog_enqueue_assets(): void
         blog_get_asset_version('assets/css/components/pagination.css')
     );
 
-    wp_enqueue_style(
-        'blog-utilities',
-        get_theme_file_uri('assets/css/utilities.css'),
-        array('blog-pagination'),
-        blog_get_asset_version('assets/css/utilities.css')
-    );
-
     $script_path = get_theme_file_path('assets/js/main.js');
 
     if (file_exists($script_path)) {

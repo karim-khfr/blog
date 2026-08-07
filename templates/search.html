@@ -1,62 +1,78 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem"}}}} -->
-<main class="wp-block-group" style="padding-top:3rem;padding-bottom:3rem">
+<!-- wp:group {"tagName":"main","className":"site-main site-main--search","layout":{"type":"constrained","contentSize":"1400px","wideSize":"1600px"}} -->
+<main class="wp-block-group site-main site-main--search">
 
-	<!-- wp:query-title {"type":"search","showSearchTerm":true} /-->
+	<!-- wp:group {"className":"search-header","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group search-header">
 
-	<!-- wp:search {"label":"Rechercher","showLabel":false,"placeholder":"Nouvelle recherche…","buttonText":"Rechercher","buttonUseIcon":true} /-->
+		<!-- wp:query-title {"type":"search","showSearchTerm":true,"className":"search-title"} /-->
 
-	<!-- wp:separator -->
-	<hr class="wp-block-separator has-alpha-channel-opacity"/>
-	<!-- /wp:separator -->
+		<!-- wp:paragraph {"className":"search-description"} -->
+		<p class="search-description">
+			Résultats correspondant à votre recherche.
+		</p>
+		<!-- /wp:paragraph -->
 
-	<!-- wp:query {"query":{"inherit":true}} -->
-	<div class="wp-block-query">
+	</div>
+	<!-- /wp:group -->
 
-		<!-- wp:post-template -->
+	<!-- wp:query {"queryId":3,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"wide","className":"search-posts-query"} -->
+	<div class="wp-block-query alignwide search-posts-query">
 
-			<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"margin":{"bottom":"2.5rem"}}}} -->
-			<div class="wp-block-group" style="margin-bottom:2.5rem">
+		<!-- wp:post-template {"layout":{"type":"grid","columnCount":3},"className":"blog-posts-grid"} -->
 
-				<!-- wp:post-title {"isLink":true,"level":2} /-->
+			<!-- wp:group {"className":"is-style-blog-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group is-style-blog-card">
 
-				<!-- wp:post-date /-->
+				<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3","height":"auto"} /-->
 
-				<!-- wp:post-excerpt {"moreText":"Consulter le résultat"} /-->
+				<!-- wp:group {"className":"blog-card__content","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group blog-card__content">
+
+					<!-- wp:post-terms {"term":"category"} /-->
+
+					<!-- wp:post-title {"isLink":true,"level":2} /-->
+
+					<!-- wp:post-excerpt {"moreText":"Lire l’article"} /-->
+
+					<!-- wp:post-date /-->
+
+				</div>
+				<!-- /wp:group -->
 
 			</div>
 			<!-- /wp:group -->
 
 		<!-- /wp:post-template -->
 
-		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->
-
-			<!-- wp:query-pagination-previous {"label":"Résultats précédents"} /-->
-
-			<!-- wp:query-pagination-numbers /-->
-
-			<!-- wp:query-pagination-next {"label":"Résultats suivants"} /-->
-
-		<!-- /wp:query-pagination -->
-
 		<!-- wp:query-no-results -->
+		<!-- wp:group {"className":"search-no-results","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group search-no-results">
 
-			<!-- wp:heading {"level":2} -->
-			<h2 class="wp-block-heading">
+			<!-- wp:heading {"level":2,"className":"search-no-results__title"} -->
+			<h2 class="wp-block-heading search-no-results__title">
 				Aucun résultat
 			</h2>
 			<!-- /wp:heading -->
 
-			<!-- wp:paragraph -->
-			<p>
-				Aucun contenu ne correspond à votre recherche. Essayez avec d’autres mots-clés.
+			<!-- wp:paragraph {"className":"search-no-results__text"} -->
+			<p class="search-no-results__text">
+				Aucun article ne correspond à votre recherche. Essayez avec d’autres mots-clés.
 			</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:search {"label":"Rechercher","showLabel":false,"placeholder":"Rechercher sur le site…","buttonText":"Rechercher"} /-->
+			<!-- wp:search {"label":"Rechercher","showLabel":false,"placeholder":"Rechercher un article…","buttonText":"Rechercher","buttonUseIcon":false,"className":"search-no-results__form"} /-->
 
+		</div>
+		<!-- /wp:group -->
 		<!-- /wp:query-no-results -->
+
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+			<!-- wp:query-pagination-previous {"label":"Résultats précédents"} /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next {"label":"Résultats suivants"} /-->
+		<!-- /wp:query-pagination -->
 
 	</div>
 	<!-- /wp:query -->
