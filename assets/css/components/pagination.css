@@ -1,0 +1,44 @@
+/**
+ * Navigation entre articles.
+ */
+
+.single-navigation {
+    gap: 2rem;
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.single-navigation .wp-block-post-navigation-link {
+    flex: 1;
+}
+
+.single-navigation .post-navigation-link-previous {
+    text-align: left;
+}
+
+.single-navigation .post-navigation-link-next {
+    text-align: right;
+}
+
+.single-navigation a {
+    color: var(--blog-color-text);
+    text-decoration-color: rgba(157, 129, 137, 0.35);
+    transition:
+        color 200ms ease,
+        text-decoration-color 200ms ease;
+}
+
+.single-navigation a:hover,
+.single-navigation a:focus-visible {
+    color: var(--blog-color-accent);
+    text-decoration-color: currentColor;
+}
+
+@media (max-width: 639px) {
+    .single-navigation {
+        flex-direction: column;
+    }
+
+    .single-navigation .post-navigation-link-next {
+        text-align: left;
+    }
+}

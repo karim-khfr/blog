@@ -114,9 +114,16 @@ function blog_enqueue_assets(): void
     );
 
     wp_enqueue_style(
+        'blog-metadata',
+        get_theme_file_uri('assets/css/components/metadata.css'),
+        array('blog-badges'),
+        blog_get_asset_version('assets/css/components/metadata.css')
+    );
+
+    wp_enqueue_style(
         'blog-pagination',
         get_theme_file_uri('assets/css/components/pagination.css'),
-        array('blog-badges'),
+        array('blog-metadata'),
         blog_get_asset_version('assets/css/components/pagination.css')
     );
 

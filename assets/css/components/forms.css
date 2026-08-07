@@ -1,0 +1,58 @@
+/**
+ * Commentaires.
+ */
+
+.single-comments {
+    margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+.single-comment {
+    padding-block: 1.5rem;
+    border-bottom: 1px solid var(--blog-color-border);
+}
+
+.single-comment__meta {
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: var(--wp--preset--font-size--small);
+}
+
+.single-comments input:not([type="submit"]),
+.single-comments textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    color: var(--blog-color-text);
+    background-color: var(--blog-color-background);
+    border: 1px solid var(--blog-color-border);
+    border-radius: var(--blog-radius);
+}
+
+.single-comments input:not([type="submit"]):focus,
+.single-comments textarea:focus {
+    border-color: var(--blog-color-accent);
+    outline: 2px solid transparent;
+    box-shadow: var(--blog-shadow-focus);
+}
+
+.single-comments textarea {
+    min-height: 10rem;
+    resize: vertical;
+}
+
+.single-comments input[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    color: var(--wp--preset--color--background);
+    background-color: var(--blog-color-accent);
+    border: 0;
+    border-radius: var(--blog-radius);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 639px) {
+    .single-comments {
+        box-sizing: border-box;
+        padding-inline: 1rem;
+    }
+}
