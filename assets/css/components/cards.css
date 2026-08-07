@@ -52,6 +52,31 @@
     margin-top: auto;
 }
 
+/**
+ * Archives du blog.
+ */
+
+.archive-header {
+    margin-bottom: clamp(2rem, 4vw, 4rem);
+}
+
+.archive-title {
+    margin-bottom: 1rem;
+}
+
+.archive-description {
+    max-width: 720px;
+    margin-bottom: 0;
+    color: var(--blog-color-detail-rose);
+    font-size: var(--wp--preset--font-size--lead);
+}
+
+.archive-posts-query {
+    width: 100%;
+}
+
+/* Responsive */
+
 @media (max-width: 1023px) {
     .blog-posts-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -63,5 +88,11 @@
     .blog-posts-grid {
         grid-template-columns: 1fr;
         margin-inline: clamp(1rem, 2vw, 2rem);
+    }
+}
+
+@media (max-width: 781px) {
+    .archive-header {
+        padding-inline: 1rem;
     }
 }
