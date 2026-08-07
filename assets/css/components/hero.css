@@ -1,0 +1,55 @@
+/**
+ * Hero principal.
+ */
+
+.hero {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 2.5rem;
+}
+
+.hero__inner {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: min(100%, 1600px);
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.hero__eyebrow {
+    margin: 0 0 2rem;
+    color: var(--blog-color-accent);
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero__title {
+    margin: 0;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.95;
+}
+
+.hero__lead {
+    width: 100%;
+    max-width: 48rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    color: var(--blog-color-detail-rose);
+    font-size: var(--wp--preset--font-size--lead);
+}
+
+.hero__actions {
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 639px) {
+    .hero__actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

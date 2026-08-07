@@ -79,9 +79,37 @@ function blog_enqueue_assets(): void
     );
 
     wp_enqueue_style(
+        'blog-hero',
+        get_theme_file_uri('assets/css/components/hero.css'),
+        array('blog-buttons'),
+        blog_get_asset_version('assets/css/components/hero.css')
+    );
+
+    wp_enqueue_style(
+        'blog-presentation',
+        get_theme_file_uri('assets/css/components/presentation.css'),
+        array('blog-hero'),
+        blog_get_asset_version('assets/css/components/presentation.css')
+    );
+
+    wp_enqueue_style(
+        'blog-cta',
+        get_theme_file_uri('assets/css/components/cta.css'),
+        array('blog-presentation'),
+        blog_get_asset_version('assets/css/components/cta.css')
+    );
+
+    wp_enqueue_style(
+        'blog-contact',
+        get_theme_file_uri('assets/css/components/contact.css'),
+        array('blog-cta'),
+        blog_get_asset_version('assets/css/components/contact.css')
+    );
+
+    wp_enqueue_style(
         'blog-cards',
         get_theme_file_uri('assets/css/components/cards.css'),
-        array('blog-buttons'),
+        array('blog-contact'),
         blog_get_asset_version('assets/css/components/cards.css')
     );
 

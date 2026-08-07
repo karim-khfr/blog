@@ -1,0 +1,49 @@
+/**
+ * Section Présentation.
+ */
+
+.presentation-section {
+    width: 100%;
+    padding-block: clamp(2.5rem, 5vw, 5rem);
+    background-color: var(--blog-color-surface);
+}
+
+.presentation-section__inner {
+    box-sizing: border-box;
+    width: min(100%, 1600px);
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 4vw, 3rem);
+    gap: clamp(2rem, 6vw, 6rem);
+}
+
+.presentation-section__eyebrow {
+    margin: 0 0 1rem;
+    color: var(--blog-color-accent);
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.presentation-section__title {
+    margin: 0;
+}
+
+.presentation-section__lead {
+    margin-top: 0;
+    font-size: var(--wp--preset--font-size--lead);
+}
+
+.presentation-section__actions {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 781px) {
+    .presentation-section__inner {
+        flex-direction: column;
+    }
+
+    .presentation-section__inner>.wp-block-column {
+        flex-basis: 100% !important;
+    }
+}

@@ -57,6 +57,23 @@
  * Lecture de l'article.
  */
 
+.single-back-link {
+    margin: 0 0 1rem;
+    font-size: var(--wp--preset--font-size--small);
+}
+
+.single-back-link a {
+    color: var(--blog-color-detail-rose);
+    text-decoration: none;
+}
+
+.single-back-link a:hover,
+.single-back-link a:focus-visible {
+    color: var(--blog-color-accent);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+}
+
 .single-content {
     box-sizing: border-box;
     width: 100%;
