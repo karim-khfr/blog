@@ -70,7 +70,7 @@ Créer un thème WordPress Block/FSE moderne pour un blog personnel et un portfo
 - [ ] mise à jour URL/historique
 - [ ] état de chargement/erreurs
 
-## 🟡 Phase 5 — Patterns et page d'accueil
+## ✅ Phase 5 — Patterns et page d'accueil
 
 ### Patterns
 - [x] Hero principal
@@ -83,14 +83,14 @@ Les patterns sont enregistrés explicitement dans `inc/patterns.php`.
 
 ### Page d'accueil
 - [x] test des patterns ensemble dans l'Éditeur du site
-- [ ] valider l'enchaînement visuel global
-- [ ] finaliser `front-page.html`
-- [ ] vérifier responsive de la page d'accueil
-- [ ] finaliser `page.html`
-- [ ] sauvegarder proprement les modifications dans les fichiers du thème
-- [ ] commit et fusion
+- [x] valider l'enchaînement visuel global
+- [x] finaliser `front-page.html`
+- [x] vérifier responsive de la page d'accueil
+- [x] finaliser `page.html`
+- [x] sauvegarder proprement les modifications dans les fichiers du thème
+- [x] commit et fusion
 
-## Phase 6 — Plugin `portfolio-core`
+## 🟡 Phase 6 — Plugin `portfolio-core`
 - [ ] créer le plugin
 - [ ] CPT Projet
 - [ ] taxonomie Type de projet
@@ -148,4 +148,4 @@ Les patterns sont enregistrés explicitement dans `inc/patterns.php`.
 
 ## Prochaine action
 
-Reprendre sur `feature/patterns`, vérifier le commit, puis finaliser `front-page.html` à partir des cinq patterns déjà créés.
+Démarrer la Phase 6 : créer une branche dédiée au développement de `portfolio-core`, définir la structure minimale du plugin, puis enregistrer le CPT Projet et ses taxonomies avant l’intégration des champs SCF.

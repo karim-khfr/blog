@@ -26,7 +26,10 @@ Thème WordPress personnalisé basé sur les **Block Themes / Full Site Editing*
 - commentaires ;
 - pagination ;
 - cartes d'articles responsive ;
-- patterns réutilisables pour la future page d'accueil.
+- patterns réutilisables ;
+- page d’accueil finalisée à partir des cinq patterns ;
+- modèle de page générique élargi et distinct de la largeur éditoriale des articles ;
+- responsive de la page d’accueil validé sur desktop, tablette et mobile.
 
 ## Patterns disponibles
 
@@ -114,10 +117,12 @@ main
 └── feature/nom-de-la-fonctionnalite
 ```
 
-La phase actuelle utilise :
+La phase `feature/patterns` est terminée et fusionnée dans `main`.
+
+La prochaine phase de développement sera consacrée au plugin :
 
 ```text
-feature/patterns
+portfolio-core
 ```
 
 Chaque fonctionnalité est testée et commitée avant fusion dans `main`.
@@ -130,13 +135,16 @@ Les fichiers locaux versionnés avec Git restent cependant la source de vérité
 
 ## Prochaine étape
 
-Finaliser la page d'accueil à partir des patterns existants, puis finaliser `front-page.html` et `page.html`.
+La phase Patterns et page d’accueil est terminée et fusionnée dans `main`.
+
+Prochaine étape : démarrer la Phase 6 et créer le plugin `portfolio-core`, avec une séparation stricte entre logique métier et présentation.
 
 Ensuite :
-1. créer `portfolio-core` ;
-2. développer le portfolio ;
-3. ajouter le filtrage dynamique ;
-4. réaliser l'audit global ;
-5. préparer la version 1.0.
+1. enregistrer le CPT Projet ;
+2. créer les taxonomies Type de projet et Technologies ;
+3. intégrer les champs SCF ;
+4. développer les templates Portfolio dans le thème ;
+5. ajouter l’interactivité et réaliser l’audit global ;
+6. préparer la version 1.0.
 
 Consulter `ROADMAP.md` et `CONTEXTE.md` pour le détail.
