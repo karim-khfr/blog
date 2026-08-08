@@ -114,9 +114,16 @@ function blog_enqueue_assets(): void
     );
 
     wp_enqueue_style(
+        'blog-portfolio',
+        get_theme_file_uri('assets/css/components/portfolio.css'),
+        array('blog-cards'),
+        blog_get_asset_version('assets/css/components/portfolio.css')
+    );
+
+    wp_enqueue_style(
         'blog-forms',
         get_theme_file_uri('assets/css/components/forms.css'),
-        array('blog-cards'),
+        array('blog-portfolio'),
         blog_get_asset_version('assets/css/components/forms.css')
     );
 

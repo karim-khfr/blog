@@ -1,0 +1,81 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"site-main site-main--portfolio","layout":{"type":"constrained","contentSize":"1400px","wideSize":"1600px"}} -->
+<main class="wp-block-group site-main site-main--portfolio">
+
+	<!-- wp:group {"className":"portfolio-header","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group portfolio-header">
+
+		<!-- wp:heading {"level":1,"className":"portfolio-title"} -->
+		<h1 class="wp-block-heading portfolio-title">Portfolio</h1>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"className":"portfolio-description"} -->
+		<p class="portfolio-description">Une sélection de projets réalisés autour du développement web, des outils numériques et de la création de solutions adaptées à des besoins concrets.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:group {"className":"portfolio-filters","layout":{"type":"flex","flexWrap":"wrap"}} -->
+		<div class="wp-block-group portfolio-filters">
+
+			<!-- wp:paragraph {"className":"portfolio-filters__all is-active"} -->
+			<p class="portfolio-filters__all is-active">
+				<a href="/portfolio/" aria-current="page">Tous</a>
+			</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:categories {"taxonomy":"project_type","showOnlyTopLevel":true,"showEmpty":false,"className":"portfolio-filters__types"} /-->
+
+		</div>
+		<!-- /wp:group -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:query {"queryId":3,"query":{"perPage":9,"pages":0,"offset":0,"postType":"project","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"wide","className":"portfolio-projects-query"} -->
+	<div class="wp-block-query alignwide portfolio-projects-query">
+
+		<!-- wp:post-template {"layout":{"type":"grid","columnCount":3},"className":"portfolio-projects-grid"} -->
+
+			<!-- wp:group {"className":"portfolio-card","layout":{"type":"default"}} -->
+			<div class="wp-block-group portfolio-card">
+
+				<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3","height":"auto"} /-->
+
+				<!-- wp:group {"className":"portfolio-card__content","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group portfolio-card__content">
+
+					<!-- wp:post-terms {"term":"project_type","className":"portfolio-card__type"} /-->
+
+					<!-- wp:post-title {"isLink":true,"level":2} /-->
+
+					<!-- wp:post-excerpt {"moreText":"Voir le projet"} /-->
+
+					<!-- wp:post-terms {"term":"project_technology","className":"portfolio-card__technologies"} /-->
+
+				</div>
+				<!-- /wp:group -->
+
+			</div>
+			<!-- /wp:group -->
+
+		<!-- /wp:post-template -->
+
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph -->
+			<p>Aucun projet n’est disponible pour le moment.</p>
+			<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+			<!-- wp:query-pagination-previous {"label":"Projets précédents"} /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next {"label":"Projets suivants"} /-->
+		<!-- /wp:query-pagination -->
+
+	</div>
+	<!-- /wp:query -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

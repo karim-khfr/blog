@@ -1,0 +1,149 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"site-main site-main--single-project","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1600px"}} -->
+<main class="wp-block-group site-main site-main--single-project">
+
+	<!-- wp:group {"className":"single-project-header","layout":{"type":"default"}} -->
+	<div class="wp-block-group single-project-header">
+
+		<!-- wp:paragraph {"className":"single-project-back-link"} -->
+		<p class="single-project-back-link">
+			<a href="/portfolio/">← Retour au portfolio</a>
+		</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:post-terms {"term":"project_type","className":"single-project-type"} /-->
+
+		<!-- wp:post-title {"level":1,"className":"single-project-title"} /-->
+
+		<!-- wp:post-excerpt {"className":"single-project-excerpt"} /-->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:post-featured-image {"align":"wide","className":"single-project-featured-image"} /-->
+
+	<!-- wp:group {"className":"single-project-details","layout":{"type":"default"}} -->
+	<div class="wp-block-group single-project-details">
+
+		<!-- wp:group {"className":"single-project-meta","layout":{"type":"flex","flexWrap":"wrap"}} -->
+		<div class="wp-block-group single-project-meta">
+
+			<!-- wp:group {"className":"single-project-meta__item single-project-meta__item--year","layout":{"type":"default"}} -->
+			<div class="wp-block-group single-project-meta__item single-project-meta__item--year">
+
+				<!-- wp:paragraph {"className":"single-project-meta__label"} -->
+				<p class="single-project-meta__label">Année</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:paragraph {"className":"single-project-meta__value","metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"project_year"}}}}} -->
+				<p class="single-project-meta__value">Année du projet</p>
+				<!-- /wp:paragraph -->
+
+			</div>
+			<!-- /wp:group -->
+
+			<!-- wp:group {"className":"single-project-meta__item single-project-meta__item--status","layout":{"type":"default"}} -->
+			<div class="wp-block-group single-project-meta__item single-project-meta__item--status">
+
+				<!-- wp:paragraph {"className":"single-project-meta__label"} -->
+				<p class="single-project-meta__label">Statut</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:paragraph {"className":"single-project-meta__value","metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"project_status"}}}}} -->
+				<p class="single-project-meta__value">Statut du projet</p>
+				<!-- /wp:paragraph -->
+
+			</div>
+			<!-- /wp:group -->
+
+			<!-- wp:group {"className":"single-project-meta__item single-project-meta__item--role","layout":{"type":"default"}} -->
+			<div class="wp-block-group single-project-meta__item single-project-meta__item--role">
+
+				<!-- wp:paragraph {"className":"single-project-meta__label"} -->
+				<p class="single-project-meta__label">Rôle</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:paragraph {"className":"single-project-meta__value","metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"project_role"}}}}} -->
+				<p class="single-project-meta__value">Rôle sur le projet</p>
+				<!-- /wp:paragraph -->
+
+			</div>
+			<!-- /wp:group -->
+
+			<!-- wp:group {"className":"single-project-meta__item single-project-meta__item--client","layout":{"type":"default"}} -->
+			<div class="wp-block-group single-project-meta__item single-project-meta__item--client">
+
+				<!-- wp:paragraph {"className":"single-project-meta__label"} -->
+				<p class="single-project-meta__label">Client / organisation</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:paragraph {"className":"single-project-meta__value","metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"project_client"}}}}} -->
+				<p class="single-project-meta__value">Client ou organisation</p>
+				<!-- /wp:paragraph -->
+
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:post-terms {"term":"project_technology","className":"single-project-technologies"} /-->
+
+		<!-- wp:buttons {"className":"single-project-actions"} -->
+		<div class="wp-block-buttons single-project-actions">
+
+			<!-- wp:button {"className":"single-project-action--project","metadata":{"bindings":{"url":{"source":"core/post-meta","args":{"key":"project_url"}}}}} -->
+			<div class="wp-block-button single-project-action--project">
+				<a
+					class="wp-block-button__link wp-element-button"
+					href="#"
+					target="_blank"
+					rel="noopener noreferrer"
+				>Voir le projet</a>
+			</div>
+			<!-- /wp:button -->
+
+			<!-- wp:button {"className":"is-style-outline single-project-action--repository","metadata":{"bindings":{"url":{"source":"core/post-meta","args":{"key":"project_repository_url"}}}}} -->
+			<div class="wp-block-button is-style-outline single-project-action--repository">
+				<a
+					class="wp-block-button__link wp-element-button"
+					href="#"
+					target="_blank"
+					rel="noopener noreferrer"
+				>Voir le dépôt</a>
+			</div>
+			<!-- /wp:button -->
+
+		</div>
+		<!-- /wp:buttons -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"className":"single-project-content","layout":{"type":"constrained","contentSize":"760px"}} -->
+	<div class="wp-block-group single-project-content">
+
+		<!-- wp:post-content /-->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:separator {"className":"single-project-separator"} -->
+	<hr class="wp-block-separator has-alpha-channel-opacity single-project-separator"/>
+	<!-- /wp:separator -->
+
+	<!-- wp:group {"className":"single-project-navigation","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+	<div class="wp-block-group single-project-navigation">
+
+		<!-- wp:post-navigation-link {"type":"previous","label":"Projet précédent","showTitle":true,"linkLabel":true,"arrow":"arrow"} /-->
+
+		<!-- wp:post-navigation-link {"type":"next","label":"Projet suivant","showTitle":true,"linkLabel":true,"arrow":"arrow"} /-->
+
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
