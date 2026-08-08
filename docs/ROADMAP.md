@@ -31,6 +31,7 @@ Créer un thème WordPress Block/FSE moderne pour un blog personnel et un portfo
 - [ ] traitement global des images
 
 ## ✅ Phase 3 — Structure globale
+
 ### Header
 - [x] identité
 - [x] navigation
@@ -87,30 +88,97 @@ Les patterns sont enregistrés explicitement dans `inc/patterns.php`.
 - [x] finaliser `front-page.html`
 - [x] vérifier responsive de la page d'accueil
 - [x] finaliser `page.html`
+- [x] élargir le modèle de page générique par rapport aux articles
+- [x] corriger le hover des boutons principaux
+- [x] corriger le débordement des cartes qui interceptait le CTA
 - [x] sauvegarder proprement les modifications dans les fichiers du thème
 - [x] commit et fusion
 
-## 🟡 Phase 6 — Plugin `portfolio-core`
-- [ ] créer le plugin
-- [ ] CPT Projet
-- [ ] taxonomie Type de projet
-- [ ] taxonomie Technologies
-- [ ] champs SCF
-- [ ] organisation du plugin
-- [ ] séparation logique métier / présentation
+## ✅ Phase 6 — Plugin `portfolio-core`
 
-## Phase 7 — Portfolio
-- [ ] archive Projet
-- [ ] single Projet
-- [ ] grille
-- [ ] filtres
-- [ ] galerie
-- [ ] technologies
-- [ ] projet suivant/précédent
-- [ ] responsive
+### Structure et dépôt
+- [x] créer le plugin
+- [x] créer un dépôt Git indépendant
+- [x] organiser `portfolio-core.php` et `inc/`
+- [x] séparation logique métier / présentation
+
+### CPT Projet
+- [x] CPT `project`
+- [x] interface d'administration
+- [x] Gutenberg
+- [x] REST
+- [x] archive `/portfolio/`
+- [x] URL individuelle `/portfolio/nom-du-projet/`
+- [x] image mise en avant
+- [x] extrait
+- [x] révisions
+
+### Taxonomies
+- [x] taxonomie Type de projet
+- [x] taxonomie Technologies
+- [x] intégration dans Gutenberg
+- [x] colonnes d'administration
+
+### Champs SCF
+- [x] année
+- [x] statut
+- [x] rôle
+- [x] client / organisation
+- [x] URL du projet
+- [x] URL du dépôt
+- [x] champs facultatifs lorsque pertinent
+- [x] définition versionnée dans le plugin
+
+### Cycle de vie du plugin
+- [x] flush des règles de réécriture à l'activation
+- [x] flush à la désactivation
+- [x] test désactivation / réactivation
+- [x] fusion de la branche fonctionnelle dans `main`
+
+## 🟡 Phase 7 — Portfolio
+
+### Templates
+- [ ] `archive-project.html`
+- [ ] `single-project.html`
+
+### Archive Projet
+- [ ] en-tête de portfolio
+- [ ] grille des projets
+- [ ] image mise en avant
+- [ ] type de projet
+- [ ] technologies utiles
+- [ ] extrait
 - [ ] état vide
+- [ ] pagination si nécessaire
+
+### Projet individuel
+- [ ] lien « Retour au portfolio »
+- [ ] titre
+- [ ] image mise en avant
+- [ ] type de projet
+- [ ] technologies
+- [ ] année
+- [ ] statut
+- [ ] rôle
+- [ ] client / organisation si renseigné
+- [ ] URL du projet si renseignée
+- [ ] URL du dépôt si renseignée
+- [ ] contenu Gutenberg
+- [ ] projet précédent / suivant
+
+### Responsive
+- [ ] mobile
+- [ ] tablette
+- [ ] desktop / grands écrans
+
+### À décider pendant la phase
+- [ ] galerie éventuelle
+- [ ] filtres du portfolio
+- [ ] pagination ou chargement alternatif
+- [ ] présentation des champs facultatifs
 
 ## Phase 8 — Interactivité
+
 ### Blog
 - [ ] filtrage dynamique par catégorie
 - [ ] URL et bouton Retour
@@ -118,6 +186,8 @@ Les patterns sont enregistrés explicitement dans `inc/patterns.php`.
 
 ### Portfolio
 - [ ] filtrage dynamique si pertinent
+- [ ] mise à jour URL/historique si filtres
+- [ ] états de chargement/erreurs si nécessaire
 
 ## Phase 9 — Pages générales
 - [ ] Contact définitif
@@ -135,6 +205,7 @@ Les patterns sont enregistrés explicitement dans `inc/patterns.php`.
 - [ ] performance
 - [ ] SEO
 - [ ] optimisation images
+- [ ] traitement global des images
 - [ ] nettoyage CSS
 - [ ] nettoyage JavaScript
 - [ ] vérification des assets
@@ -148,4 +219,10 @@ Les patterns sont enregistrés explicitement dans `inc/patterns.php`.
 
 ## Prochaine action
 
-Démarrer la Phase 6 : créer une branche dédiée au développement de `portfolio-core`, définir la structure minimale du plugin, puis enregistrer le CPT Projet et ses taxonomies avant l’intégration des champs SCF.
+Démarrer la Phase 7 dans le dépôt du thème sur la branche :
+
+```text
+feature/portfolio
+```
+
+Commencer par `archive-project.html`, puis construire `single-project.html` en réutilisant le design system et les composants déjà validés.

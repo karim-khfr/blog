@@ -1,6 +1,6 @@
 # Blog
 
-Thème WordPress personnalisé basé sur les **Block Themes / Full Site Editing**, destiné à un blog personnel et à un futur portfolio professionnel.
+Thème WordPress personnalisé basé sur les **Block Themes / Full Site Editing**, destiné à un blog personnel et à un portfolio professionnel.
 
 ## Technologies
 
@@ -10,7 +10,8 @@ Thème WordPress personnalisé basé sur les **Block Themes / Full Site Editing*
 - CSS
 - JavaScript
 - Git / GitHub
-- SCF (Secure Custom Fields), prévu pour le futur plugin Portfolio
+- SCF (Secure Custom Fields)
+- plugin personnalisé `portfolio-core`
 
 ## Fonctionnalités actuelles
 
@@ -29,11 +30,12 @@ Thème WordPress personnalisé basé sur les **Block Themes / Full Site Editing*
 - patterns réutilisables ;
 - page d’accueil finalisée à partir des cinq patterns ;
 - modèle de page générique élargi et distinct de la largeur éditoriale des articles ;
-- responsive de la page d’accueil validé sur desktop, tablette et mobile.
+- responsive de la page d’accueil validé sur desktop, tablette et mobile ;
+- prise en charge du portfolio via le plugin indépendant `portfolio-core`.
 
 ## Patterns disponibles
 
-Les patterns sont actuellement enregistrés dans `inc/patterns.php`.
+Les patterns sont enregistrés explicitement dans `inc/patterns.php`.
 
 - Hero principal
 - Présentation
@@ -68,6 +70,8 @@ blog/
 │   ├── images/
 │   └── js/
 │       └── main.js
+├── docs/
+│   └── ROADMAP.md
 ├── inc/
 │   ├── enqueue.php
 │   └── patterns.php
@@ -85,32 +89,34 @@ blog/
 │   └── single.html
 ├── functions.php
 ├── README.md
-├── ROADMAP.md
+├── screenshot.png
 ├── style.css
 └── theme.json
 ```
 
-Il n'existe actuellement pas de `assets/css/utilities.css`.
-
 ## Architecture
 
-Le thème est responsable de la présentation.
+Le thème est responsable de la présentation : templates, styles, responsive, patterns et affichage du portfolio.
 
-La logique métier du portfolio sera placée dans un plugin indépendant :
+La logique métier du portfolio est placée dans un plugin indépendant :
 
 ```text
 portfolio-core/
 ```
 
-Le plugin gérera notamment :
-- CPT Projet ;
-- taxonomies ;
-- champs SCF ;
-- logique métier.
+Le plugin gère notamment :
+
+- CPT `project` / Projet ;
+- taxonomie `project_type` / Type de projet ;
+- taxonomie `project_technology` / Technologies ;
+- champs SCF du projet ;
+- règles de réécriture et cycle d'activation du plugin.
+
+Cette séparation permet au contenu du portfolio de rester indépendant du thème actif.
 
 ## Développement
 
-Workflow Git :
+Workflow Git du thème :
 
 ```text
 main
@@ -119,10 +125,12 @@ main
 
 La phase `feature/patterns` est terminée et fusionnée dans `main`.
 
-La prochaine phase de développement sera consacrée au plugin :
+Le plugin `portfolio-core` possède son propre dépôt Git. Son socle fonctionnel est terminé et fusionné dans sa branche `main`. Lien vers le dépôt Github du plugin : https://github.com/karim-khfr/portfolio-core
+
+La prochaine branche de travail du thème est :
 
 ```text
-portfolio-core
+feature/portfolio
 ```
 
 Chaque fonctionnalité est testée et commitée avant fusion dans `main`.
@@ -133,18 +141,40 @@ L'extension **Create Block Theme** est installée comme outil de développement.
 
 Les fichiers locaux versionnés avec Git restent cependant la source de vérité.
 
+## État du plugin `portfolio-core`
+
+Le plugin est installé et activé dans l'environnement local.
+
+Fonctionnalités validées :
+
+- CPT Projet ;
+- Gutenberg / REST ;
+- archive publique `/portfolio/` ;
+- URLs individuelles `/portfolio/nom-du-projet/` ;
+- taxonomie Type de projet ;
+- taxonomie Technologies ;
+- champs SCF : année, statut, rôle, client / organisation, URL du projet, URL du dépôt ;
+- flush des règles de réécriture à l'activation et à la désactivation.
+
+Les champs Client / organisation, URL du projet et URL du dépôt peuvent rester vides.
+
 ## Prochaine étape
 
-La phase Patterns et page d’accueil est terminée et fusionnée dans `main`.
+La Phase 6 — `portfolio-core` — est terminée.
 
-Prochaine étape : démarrer la Phase 6 et créer le plugin `portfolio-core`, avec une séparation stricte entre logique métier et présentation.
+La prochaine étape est la **Phase 7 — Portfolio** dans le thème, sur la branche :
 
-Ensuite :
-1. enregistrer le CPT Projet ;
-2. créer les taxonomies Type de projet et Technologies ;
-3. intégrer les champs SCF ;
-4. développer les templates Portfolio dans le thème ;
-5. ajouter l’interactivité et réaliser l’audit global ;
-6. préparer la version 1.0.
+```text
+feature/portfolio
+```
 
-Consulter `ROADMAP.md` et `CONTEXTE.md` pour le détail.
+Priorités :
+
+1. créer `archive-project.html` ;
+2. créer `single-project.html` ;
+3. construire la grille des projets ;
+4. afficher les taxonomies et champs utiles ;
+5. gérer la navigation entre projets ;
+6. vérifier le responsive et l'état vide.
+
+Consulter [`docs/ROADMAP.md`](docs/ROADMAP.md) pour le détail.
