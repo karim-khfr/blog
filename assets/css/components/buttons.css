@@ -15,6 +15,10 @@
     transform: translateY(-1px);
 }
 
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:hover {
+    color: var(--wp--preset--color--background);
+}
+
 .wp-block-button.is-style-outline .wp-block-button__link {
     background-color: transparent;
     border: 1px solid var(--blog-color-text);

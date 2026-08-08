@@ -33,7 +33,7 @@
 }
 
 .blog-posts-grid .blog-card__content {
-    height: 100%;
+    min-height: 0;
 }
 
 .blog-posts-grid .wp-block-post-title {
